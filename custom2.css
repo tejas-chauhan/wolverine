@@ -1,0 +1,15 @@
+#animationID{
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	border-radius: 5px;
+	animation-name: animationName;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	position: relative;
+}
+@keyframes animationName{
+	100%{
+		transform: rotate(5000deg);
+	}
+} 

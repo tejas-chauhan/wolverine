@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SlideShow</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="slideicon" href="w.jpg" id="icon">
+</head>
+<body>
+		                                                                             
+		<img id="slider" src='w.jpg'>
+		<br>
+		<input type="button" value="<" onclick="prevImage()" id="prev">
+		<input type="button" value=">" onclick="nextImage()" id="next">
+			<script>
+			var i = 0;
+			image = ['w.jpg','w4.jpg','w5.jpg','w7.jpg'];
+			function nextImage(){
+				document.getElementById('slider').src = image[++i];
+				if(i==4){
+					document.getElementById('slider').src = image[0];
+					i = 0;
+				}
+			}
+			function prevImage(){
+				document.getElementById('slider').src = image[--i];
+				if(i==-1){
+					document.getElementById('slider').src= image[3];
+					i = 3;
+				}
+			}
+			/*var i = 1;
+			function nextImage(){
+				
+				document.getElementById('slider').src = 'img/' + ++i + '.jpg';
+				if(i==5){
+					document.getElementById('slider').src = 'img/' + 1 + '.jpg';
+					i = 1;
+				}
+			}
+			function prevImage(){
+				
+				document.getElementById('slider').src = 'img/' + --i + '.jpg';
+				if(i==0){
+					document.getElementById('slider').src = 'img/' + 4 + '.jpg';
+					i = 4;
+				}
+			}*/
+			setInterval(nextImage , 3000);
+		</script> 
+</body>
+</html>

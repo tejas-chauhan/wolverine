@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="custom2.css">
+	<title>index2</title>
+</head>
+<body>
+	<script>
+			function addTextbox(){
+				var temp=Number(document.getElementById("addTextBoxID").value);
+			for(var i=1;i<=temp;i++) 
+			{
+				document.getElementById("formID").innerHTML+="<input type='text' id='txt"+i+"'/>";
+}
+
+		document.getElementById("getvalueID").style.display='block';
+}
+function displayData(){
+	alert(document.getElementById("txt1").value);
+
+}
+
+					
+	</script>
+	<input type="text" name="addTextBoxID"/>
+	<div id="formID">
+		
+	</div>
+	<input type="button" value="start" onclick="addTextbox()">
+	<input type="button" name="get value" style="display: none;" id="getvalueID" onclick="displayData()"/>
+	
+</body>
+</html>
